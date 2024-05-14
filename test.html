@@ -13,6 +13,11 @@
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9831170565288882"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
+      integrity="sha384-mXVrIX2T/Kszp6Z0aEWaA8Nm7J6/ZeWXbL8UpGRjKwWe56Srd/iyNmWMBhcItAjH"
+      crossorigin="anonymous"
+    ></script>
     <title>K-밈 테스트 - 문제 페이지</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -50,6 +55,7 @@
       </div>
     </main>
     <footer class="container text-center my-3">
+      <button id="kakao-share"></button>
       <p>Copyright &copy; 2016 - 2024 Elice Inc. All Rights Reserved.</p>
     </footer>
     <script src="test.js" async></script>
@@ -57,5 +63,14 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       async
     ></script>
+
+    <script>
+      Kakao.init("0d0e43e72da23bc81e36ecb6aae229f2"); // 사용하려는 앱의 JavaScript 키 입력
+
+      Kakao.Share.createScrapButton({
+        container: "#kakao-share",
+        requestUrl: location.href,
+      });
+    </script>
   </body>
 </html>
